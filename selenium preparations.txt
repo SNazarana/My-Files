@@ -1,0 +1,116 @@
+1. Actions action = newActions(driver);
+WebElement element = driver
+
+
+
+2.
+Actions action = newActions(driver);
+WebElement element = driver.findElement(By.id("elementId"));
+action.contextClick(element).perform();
+
+
+
+Actions action = newActions(driver);
+WebElement element = driver.findElement(By.id("elementId"));
+action.moveToElement(element).perform();
+
+
+
+
+
+//WebElement on which drag and drop operation needs to be performed
+WebElementfromWebElement = driver.findElement(By Locator of fromWebElement);
+
+//WebElement to which the above object is dropped
+WebElementtoWebElement = driver.findElement(By Locator of toWebElement);
+
+//Creating object of Actions class to build composite actions
+Actions builder = newActions(driver);
+
+//Building a drag and drop action
+Action dragAndDrop = builder.clickAndHold(fromWebElement)
+		     .moveToElement(toWebElement)
+		     .release(toWebElement)
+	     .build();
+
+//Performing the drag and drop action
+dragAndDrop.perform();
+
+
+driver.navigate().refresh();
+
+driver.get(driver.getCurrentUrl());
+
+
+driver.navigate().back();
+
+driver.get("url"); or
+driver.navigate().to("url");
+
+String Text = driver.findElement(By.id("Text")).getText();\
+
+Select selectByValue = new Select(driver.findElement(By.id("SelectID_One")));
+selectByValue.selectByValue("greenvalue");
+
+Select selectByVisibleText = new Select (driver.findElement(By.id("SelectID_Two")));
+selectByVisibleText.selectByVisibleText("Lime");
+
+
+driver.switchTo().frame("ID of the frame");
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import java.io.File;
+import java.io.IOException;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class TakeScreenshot {
+WebDriver drv;
+@Before
+public void setUp() throws Exception {
+driver = new FirefoxDriver();
+drv.get("https://google.com");
+}
+@After
+public void tearDown() throws Exception {
+drv.quit();
+}
+
+@Test
+public void test() throws IOException {
+//capture the screenshot
+File scrFile = ((TakeScreenshot)drv).getScreenshotAs(OutputType.FILE);
+// paste the screenshot in the desired location
+FileUtils.copyFile(scrFile, new File("C:\\Screenshot\\Scr.jpg"))
+}
+}
+
+
+
+
+WebElement username = drv.findElement(By.id("Email"));
+// entering username
+username.sendKeys("sth");
+
+
+driver.findElement(By.linkText("Google")).click();
+
+
+Use driver.manage().getCookies() to get the cookies for the current domain
+
+
+driver.getWindowHandles()
+
+
+
+
+
+
+
+
+
