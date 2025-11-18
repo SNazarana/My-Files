@@ -1,0 +1,1 @@
+1.We can use super () to call the parent default constructor. It should be the first statement in a constructor.

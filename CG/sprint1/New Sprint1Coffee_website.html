@@ -1,0 +1,1351 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--js code is here--->
+        <script>
+           let navbar = document.querySelector('.navbar');
+           function validateform(){
+            var name=document.myform.name.value;
+            var email=document.myform.email.value;
+            var phone=document.myform.phone.value;
+            if(name==null || name=="")
+            {
+                return false;
+            }
+           }
+
+
+
+
+window.onscroll = () =>{
+    navbar.classList.remove('active');
+}
+            </script>
+        <!-------font awesome cdn link-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+       
+       :root{
+            --main-color:#d3ad7f;
+            --black:#13131a;
+            --bg:#010103;
+            --border:.1rem solid rgba(255,255,255,.3);
+       }
+       
+        *{
+            font-family: 'Roboto', sans-serif;
+            margin:0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+            border:none;
+            text-decoration: none;
+            text-transform: capitalize;
+            transition: .2s linear;
+        }
+
+        html {
+        font-size: 62.5%;
+        overflow-x: hidden;
+         scroll-padding-top: 9rem;
+        scroll-behavior: smooth;
+            }
+            
+            html::-webkit-scrollbar
+            {
+            	width: .8rem;
+            }
+
+			html::-webkit-scrollbar-track
+            {
+				background: transparent;            
+            }
+    
+    
+    		html::-webkit-scrollbar-thumb
+            {
+				background: #fff;
+                border-radius: 5rem;
+            }
+            
+            body{
+            	background: var(--bg);
+            }
+            section{
+                padding:2rem,7%;
+            }
+            .btn{
+                 margin-top: 1rem;
+                display: inline-block;
+                 padding:.9rem 3rem;
+                 font-size: 1.7rem;
+                 color:#fff;
+                 background: var(--main-color);
+                cursor: pointer;
+                }
+
+.btn:hover{
+    letter-spacing: .2rem;
+}
+            
+.header{
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:1.5rem 7%;
+    border-bottom: var(--border);
+    position: fixed;
+    top:0; left: 0; right: 0;
+    z-index: 1000;
+}
+
+.header .logo img{
+    height: 6rem;
+}
+
+.header .navbar a{
+    margin:0 1rem;
+    font-size: 1.6rem;
+    color:#fff;
+}
+
+.header .navbar a:hover{
+    color:var(--main-color);
+    border-bottom: .1rem solid var(--main-color);
+    padding-bottom: .5rem;
+}
+.header .icons div{
+    color:#fff;
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+}
+
+.header .icons div:hover{
+    color:var(--main-color);
+}#menu-btn{
+    display: none;
+}
+
+.header .search-form{
+    position: absolute;
+    top:105%; right: 7%;
+    background: #fff;
+    width: 50rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    transform: scaleY(0);
+    transform-origin: top;
+}
+
+
+
+
+.header .search-form input{
+    height: 100%;
+    width: 100%;
+    font-size: 1.6rem;
+    color:var(--black);
+    padding:1rem;
+    text-transform: none;
+}
+
+
+
+.header .search-form label{
+    cursor: pointer;
+    font-size: 2.2rem;
+    margin-right: 1.5rem;
+    color:var(--black);
+}
+
+.header .search-form label:hover{
+    color:var(--main-color);
+}
+.header .search-form.active{
+    transform: scaleY(1);
+}
+.home{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background:url('https://thumbs.dreamstime.com/b/traditional-coffee-cup-heart-shaped-steam-rustic-wood-70228609.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.home .content{
+    max-width: 60rem;
+}
+.home .content h3{
+    font-size: 6rem;
+    text-transform: uppercase;
+    color:#FA8072;
+}
+
+
+.about .row{
+    display: flex;
+    align-items: center;
+    background:var(--black);
+    flex-wrap: wrap;
+}
+
+<--.about .row-->
+
+ {
+    flex:1 1 45rem;
+}
+
+ {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 400px;
+  max-height: 400px;
+  position: relative;
+  margin: auto;
+}
+
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 100%) {
+  .text {font-size: 5px}
+}   
+
+
+
+
+.about .row .content{
+    flex:1 1 45rem;
+    padding:2rem;
+}
+
+.about .row .content h3{
+    font-size: 3rem;
+    color:#fff;
+}
+
+.about .row .content p{
+    font-size: 1.6rem;
+    color:#ccc;
+    padding:1rem 0;
+    line-height: 1.8;
+}
+.heading{
+    text-align: center;
+    color:#fff;
+    text-transform: uppercase;
+    padding-bottom: 3.5rem;
+    font-size: 4rem;
+}
+
+.heading span{
+    color:var(--main-color);
+    text-transform: uppercase;
+}
+
+
+.menu .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap:1.5rem;
+}
+
+.menu .box-container .box{
+    padding:5rem;
+    text-align: center;
+    border:var(--border);    
+}
+
+.menu .box-container .box img{
+    height: 20rem;
+}
+
+.menu .box-container .box h3{
+    color: #fff;
+    font-size: 2rem;
+    padding:1rem 0;
+}
+
+.menu .box-container .box .price{
+    color: #fff;
+    font-size: 2.5rem;
+    padding:.5rem 0;
+}
+
+.menu .box-container .box .price span{
+    font-size: 1.5rem;
+    text-decoration: line-through;
+    font-weight: lighter;
+}
+
+.menu .box-container .box:hover{
+    background:#fff;
+}
+
+.menu .box-container .box:hover > *{
+    color:var(--black);
+}
+.products .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap:1.5rem;
+}
+
+.products .box-container .box{
+    text-align: center;
+    border:var(--border);
+    padding: 2rem;
+}
+
+.products .box-container .box .icons a{
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    border:var(--border);
+    color:#fff;
+    margin:.3rem;
+}
+
+.products .box-container .box .icons a:hover{
+    background:var(--main-color);
+}
+
+.products .box-container .box .image{
+    padding: 2.5rem 0;
+}
+
+.products .box-container .box .image img{
+    height: 25rem;
+}
+
+.products .box-container .box .content h3{
+    color:#fff;
+    font-size: 2.5rem;
+}
+
+.products .box-container .box .content .stars{
+    padding: 1.5rem;
+}
+
+.products .box-container .box .content .stars i{
+    font-size: 1.7rem;
+    color: var(--main-color);
+}
+
+.products .box-container .box .content .price{
+    color:#fff;
+    font-size: 2.5rem;
+}
+
+.products .box-container .box .content .price span{
+    text-decoration: line-through;
+    font-weight: lighter;
+    font-size: 1.5rem;
+}
+
+
+.review .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap:1.5rem;
+}
+
+.review .box-container .box{
+    border:var(--border);
+    text-align: center;
+    padding:3rem 2rem;
+}
+
+.review .box-container .box p{
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color:#ccc;
+    padding:2rem 0;
+}
+
+.review .box-container .box .user{
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.review .box-container .box h3{
+    padding:1rem 0;
+    font-size: 2rem;
+    color:#fff;
+}
+
+.review .box-container .box .stars i{
+    font-size: 1.5rem;
+    color:var(--main-color);
+}
+
+.contact .row .map{
+    flex:1 1 45rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.contact .row form{
+    flex:1 1 45rem;
+    padding:5rem 2rem;
+    text-align: center;
+}
+
+.contact .row form h3{
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    color:#fff;
+}
+
+.contact .row form .inputBox{
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    background:var(--bg);
+    border:var(--border);
+}
+
+.contact .row form .inputBox span{
+    color:#fff;
+    font-size: 2rem;
+    padding-left: 2rem;
+}
+
+.contact .row form .inputBox input{
+    width: 100%;
+    padding:2rem;
+    font-size: 1.7rem;
+    color:#fff;
+    text-transform: none;
+    background:none;
+}
+
+.blogs .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap:1.5rem;
+}
+
+.blogs .box-container .box{
+    border:var(--border);    
+}
+
+.blogs .box-container .box .image{
+    height: 25rem;
+    overflow:hidden;
+    width: 100%;
+}
+
+.blogs .box-container .box .image img{
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+.blogs .box-container .box:hover .image img{
+    transform: scale(1.2);
+}
+
+.blogs .box-container .box .content{
+    padding:2rem;
+}
+
+.blogs .box-container .box .content .title{
+    font-size: 2.5rem;
+    line-height: 1.5;
+    color:#fff;
+}
+
+.blogs .box-container .box .content .title:hover{
+    color:var(--main-color);
+}
+
+.blogs .box-container .box .content span{
+    color:var(--main-color);
+    display: block;
+    padding-top: 1rem;
+    font-size: 2rem;
+}
+
+.blogs .box-container .box .content p{
+    font-size: 1.6rem;
+    line-height: 1.8;
+    color:#ccc;
+    padding:1rem 0;
+}
+
+.footer{
+    background:var(--black);
+    text-align: center;
+}
+
+.footer .share{
+    padding:1rem 0;
+}
+
+.footer .share a{
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    color:#fff;
+    border:var(--border);
+    margin:.3rem;
+    border-radius: 50%;
+}
+
+.footer .share a:hover{
+    background-color: var(--main-color);
+}
+
+.footer .links{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding:2rem 0;
+    gap:1rem;
+}
+
+.footer .links a{
+    padding:.7rem 2rem;
+    color:#fff;
+    border:var(--border);
+    font-size: 2rem;
+}
+      
+ </style>    
+    </head>
+    <body>
+       <!--header section start-->
+       <header class="header">
+        <a href="#" class="logo">
+            <img src="https://m.media-amazon.com/images/I/415nvZxXdDL.jpg" alt="">
+        </a>
+        
+    <nav class="navbar">
+        <a href="#home">home</a>
+        <a href="#about">about</a>
+        <a href="#menu">menu</a>
+        <a href="#products">products</a>
+        <a href="#review">review</a>
+        <a href="#contact">contact</a>
+        <a href="#blogs">blogs</a>
+    </nav>
+    <div class="icons">
+       
+   
+        <div class="fas fa-bars" id="menu-btn"></div>
+    </div><!-----
+    <div class="search-form">
+        <input type="search" id="search-box" placeholder="search here...">
+        <label for="search-box" class="fas fa-search"></label>
+    </div> --->
+
+        </header>
+        <!-- header section ends -->
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+    <div class="content">
+        <h3> All you need is LOVE and COFFEE</h3>
+         <h2 style= "color: white";><b>Good ideas start with brainstorming, Great ideas start with coffee</b></h2>
+        
+        <a href="#menu" class="btn">get yours now</a>
+    </div>
+
+</section>
+
+<!-- home section ends -->
+<!-- about section starts  -->
+
+<section class="about" id="about">
+
+    <h1 class="heading"> <span>about</span> us </h1>
+
+    <div class="row">
+
+       <div class="slideshow-container">
+
+<div class="mySlides fade">
+ 
+  <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2FmZXxlbnwwfHwwfHw%3D&w=1000&q=80" style="width:100%">
+ 
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQp7QWJXZtfpNfunb0I2qW-XbKpyr7u6cKa-g&usqp=CAU" style="width:200%, height:200%">
+  
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="https://restaurantindia.s3.ap-south-1.amazonaws.com/s3fs-public/content9434.jpg" style="width:100%">
+  
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+
+        <div class="content">
+            <h3>what makes our coffee special?</h3>
+            <p>Quality coffee is a passion for us and we are so thankful for your patronage which allows me to do this.</p>
+
+               <p> The coffee bean we buy, we typically don’t roast immediately, and instead age it for at least a year. Like a fine wine that gets better after some years "resting" before being consumed, we feel our coffee is softer yet bigger because we age it to reduce acids giving it a smoother taste. As you may have already experienced, you don't have to add cream and sweetener to drink our coffee – it has a smoother and less acidic taste without cream because of this aging process.
+            </p>
+            
+        </div>
+
+    </div>
+
+</section>
+
+<!-- about section ends -->
+<!-- menu section starts  -->
+
+<section class="menu" id="menu">
+
+    <h1 class="heading"> our <span>menu</span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCZUpEYTmlrPVOZ3lewxzQPwyd7SNTLfoRag&usqp=CAU" alt="">
+            <h3>Black Coffee</h3>
+            <div class="price">RS 100 <span>115</span></div>
+        
+        </div>
+         
+        <div class="box">
+            <img src="https://coffeeaffection.com/wp-content/uploads/2021/06/South-Indian-Coffee_shutterstock_jayk67.jpg" alt="">
+            <h3>South Indian Coffee</h3>
+            <div class="price">RS 450 <span>580</span></div>
+        
+        </div>
+
+        <div class="box">
+            <img src="https://assets.gqindia.com/photos/60db02347829f66368dd3677/master/pass/top-image-01%20(29).jpg" alt="">
+            <h3>Classic filter coffee</h3>
+            <div class="price">RS 120 <span>147</span></div>
+        
+        </div>
+
+        <div class="box">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMxgfjBtbBJ2QqPARVxdq8jvvWKo4rXCUHrA&usqp=CAU" alt="">
+            <h3>Cafe Latte</h3>
+            <div class="price">RS 134<span>150</span></div>
+        
+        </div>
+
+        <div class="box">
+            <img src="https://media.istockphoto.com/photos/hot-espresso-in-honey-picture-id940535678?k=20&m=940535678&s=612x612&w=0&h=9gbVYc1VJF6qoVOvHi_RPvicOpnq7y19F6wSlbW8WLk=" alt="">
+            <h3>Coffee Mocha</h3>
+            <div class="price">RS 163 <span>180</span></div>
+            
+        </div>
+
+       <div class="box">
+            <img src="https://www.eatthis.com/wp-content/uploads/sites/4/2021/03/espresso-cup.jpg?quality=82&strip=1&w=800" alt="">
+            <h3>Espresso</h3>
+            <div class="price">RS 160 <span>170</span></div>
+            
+        </div>
+
+        
+
+       <div class="box">
+            <img src="https://www.thespruceeats.com/thmb/tcxc987aXv1Q3sfgEqSLQDXcDRg=/1971x1478/smart/filters:no_upscale()/caramelmacchiato-2-2071439071b54bbcbc8f4b790f1d6a87.jpg" alt="">
+            <h3>Macchiato</h3>
+            <div class="price">RS 140 <span>147</span></div>
+            
+        </div>
+
+       
+
+       <div class="box">
+            <img src="https://globalassets.starbucks.com/assets/d668acbc691b47249548a3eeac449916.jpg?impolicy=1by1_wide_topcrop_630" alt="">
+            <h3>Caffe Misto</h3>
+            <div class="price">RS 230 <span>250</span></div>
+            
+        </div>
+      
+
+          <div class="box">
+            <img src="https://www.monin.com/us//media/catalog/product/cache/15379ef9b25ecb17d7c23aeff27e4f55/0/5/053cd36b-f83a-4951-a886-e38562598292-1.png" alt="">
+            <h3>Cafe Mocha</h3>
+            <div class="price">RS 250 <span>265</span></div>
+            
+        </div>
+
+
+          <div class="box">
+            <img src="https://opt.toiimg.com/recuperator/img/toi/m-59806597/59806597.jpg&width=500&resizemode=4" alt="">
+            <h3>Cappuccino</h3>
+            <div class="price">RS 300 <span>330</span></div>
+            
+        </div>
+
+          <div class="box">
+            <img src="https://globalassets.starbucks.com/assets/22f8e0db2106468d953bce434f5328a3.jpg?impolicy=1by1_wide_topcrop_630" alt="">
+            <h3>Caramel Ribbon Crunch Frappuccino</h3>
+            <div class="price">RS 450 <span>520</span></div>
+            
+        </div>
+
+   <div class="box">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3HLrOkReB1UmIhp6HrdJDGBe83Duyu5DZBg&usqp=CAU" alt="">
+            <h3>Dalgona Matcha Coffee</h3>
+            <div class="price">RS 350 <span>370</span></div>
+            
+        </div>
+
+     <div class="box">
+            <img src="https://coldstonecreameryfranchise.com/wp-content/uploads/2017/05/cold-stone-creamery-ice-cream-flavors-1024x845.png" alt="">
+            <h3>Cold Stone Creamer</h3>
+            <div class="price">RS 400 <span>430</span></div>
+            
+        </div>
+
+     <div class="box">
+            <img src="https://www.biggerbolderbaking.com/wp-content/uploads/2020/07/The-Easiest-Homemade-Gelato-WS-Thumbnail.jpeg" alt="">
+            <h3>Gelato</h3>
+            <div class="price">RS 250 <span>270</span></div>
+            
+        </div>
+       
+    
+     <div class="box">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Macha_kakigori_snow_cone.jpg" alt="">
+            <h3>Kakigori</h3>
+            <div class="price">RS 550 <span>590</span></div>
+            
+        </div>
+
+         
+          <div class="box">
+            <img src="https://i.pinimg.com/originals/c9/5b/f2/c95bf24cd7b37aa108e42dabdceed2b9.jpg" alt="">
+            <h3>Dark Roast Coffee</h3>
+            <div class="price">RS 220 <span>270</span></div>
+            
+        </div>
+          
+         
+
+
+          <div class="box">
+            <img src="https://globalassets.starbucks.com/assets/c297d3528849499f81322d561575d94b.jpg?impolicy=1by1_wide_topcrop_630" alt="">
+            <h3>Espresso Frappuccino</h3>
+            <div class="price">RS 190 <span>210</span></div>
+            
+        </div>
+
+
+        <div class="box">
+            <img src="https://vegetariangastronomy.com/wp-content/uploads/2017/09/aztec-iced-mocha-recipe-vegan-4.jpg" alt="">
+            <h3>Aztec Coffee</h3>
+            <div class="price">RS 195 <span>225</span></div>
+            
+        </div>
+
+
+
+        <div class="box">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNkHdIRvHIHOyLCdtatR4XdPYr7_kJO83itA&usqp=CAU" alt="">
+            <h3>Freshake Coffee</h3>
+            <div class="price">RS 550 <span>560</span></div>
+            
+        </div>
+
+
+         <div class="box">
+            <img src="https://thelittlestcrumb.com/wp-content/uploads/coconut-milk-latte-featured-image-1.jpg" alt="">
+            <h3>Coconut Milk Latte</h3>
+            <div class="price">RS 420 <span>445</span></div>
+            
+        </div>
+          
+
+         <div class="box">
+            <img src="https://www.thedinnerbite.com/wp-content/uploads/2021/04/condensed-milk-coffee-img-6.jpg" alt="">
+            <h3>Iced coffee with milk</h3>
+            <div class="price">RS 220 <span>235</span></div>
+            
+        </div>
+
+       <div class="box">
+            <img src="https://www.nelliebellie.com/wp-content/uploads/2017/06/iced-coffee.jpg" alt="">
+            <h3>Iced Coffee</h3>
+            <div class="price">RS 100 <span>120</span></div>
+            
+        </div>  
+     
+        <div class="box">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXJ161-0UZjqNdiKQddPVfVE9mbC74J6qE7A&usqp=CAU" alt="">
+            <h3>ICED MATCHA LATTE</h3>
+            <div class="price">RS 175<span>200</span></div>
+            
+        </div>
+          
+         <div class="box">
+            <img src="https://tealovers.com/wp-content/uploads/2018/01/matcha-latte-1.jpg" alt="">
+            <h3>Matcha Latte</h3>
+            <div class="price">RS 240<span>250</span></div>
+            
+        </div>
+
+          
+         <div class="box">
+            <img src="https://www.starbucks.co.nz/content/menu/0068272001646606037.jpg" alt="">
+            <h3>Mocha Cookie Crumble Frappuccino</h3>
+            <div class="price">RS 500<span>530</span></div>
+            
+        </div>
+
+        <div class="box">
+            <img src="https://coffeeatthree.com/wp-content/uploads/starbucks-mocha-frappuccino-recipe-500x500.jpg" alt="">
+            <h3>Mocha Frappuccino</h3>
+            <div class="price">RS 480<span>500</span></div>
+            
+        </div>
+      
+        <div class="box">
+            <img src="https://assets.bonappetit.com/photos/57b4df9f3e1d654349a2fefb/master/pass/iced-matcha-latte.jpg" alt="">
+            <h3>Iced Matcha Latte</h3>
+            <div class="price">RS 175<span>200</span></div>
+            
+        </div>
+
+
+         <div class="box">
+            <img src="https://static.wixstatic.com/media/5a1e59_991a7ae7035542038e47ec72ce098ae8~mv2.jpg/v1/fill/w_925,h_617,al_c,q_90/5a1e59_991a7ae7035542038e47ec72ce098ae8~mv2.webp" alt="">
+            <h3>Chocolate strawberries</h3>
+            <div class="price">RS 400<span>430</span></div>
+            
+        </div>
+      
+         <div class="box">
+            <img src="https://static.wixstatic.com/media/5a1e59_c78c98dc49284cb68c769e309372dc52~mv2.jpg/v1/fill/w_925,h_617,al_c,q_90/5a1e59_c78c98dc49284cb68c769e309372dc52~mv2.webp" alt="">
+            <h3>Cannolis (regular size or miniature)</h3>
+            <div class="price">RS 380<span>420</span></div>
+            
+        </div>
+
+
+         <div class="box">
+            <img src="https://static.wixstatic.com/media/5a1e59_f38ea1c61967488cb168dc5b09c8dcbe~mv2.jpg/v1/fill/w_869,h_580,al_c,lg_1,q_90/5a1e59_f38ea1c61967488cb168dc5b09c8dcbe~mv2.webp" alt="">
+            <h3>Rose cupcake</h3>
+            <div class="price">RS 480<span>520</span></div>
+            
+        </div>
+
+         
+      
+       
+        <div class="box">
+            <img src="https://www.biggerbolderbaking.com/wp-content/uploads/2022/02/BBBCover-1460-1-scaled.jpg" alt="">
+            <h3>Banana split</h3>
+            <div class="price">RS 290<span>350</span></div>
+            
+        </div>
+      
+        <div class="box">
+            <img src="data:image/jpeg;base64,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" alt="">
+            <h3>Inverted Cappuccino</h3>
+            <div class="price">RS 144<span>126</span></div>
+            
+        </div>
+
+        <div class="box">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3HLrOkReB1UmIhp6HrdJDGBe83Duyu5DZBg&usqp=CAU" alt="">
+            <h3>Dalgona Matcha Coffee</h3>
+            <div class="price">RS 173<span>165</span></div>
+            
+        </div>
+
+    </div>
+
+</section>
+
+<!-- menu section ends -->
+
+<!-------product section start --->
+<section class="products" id="products">
+
+    <h1 class="heading"> our <span>products</span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <div class="icons">
+       
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+                <img src="https://5.imimg.com/data5/BL/XH/MY-25089185/cafe-coffee-day-cookies-500x500.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>Cafe Coffee Cookies</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <div class="price">Rs 500 <span> 570</span></div>
+            </div>
+        </div>
+     <div class="box">
+            <div class="icons">
+       
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+                <img src="https://5.imimg.com/data5/SELLER/Default/2020/8/SP/LO/NZ/13015229/dark-chocolate-covered-almonds-500x500.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>Dark Chocolate Almonds</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="price">Rs 600 <span> 640</span></div>
+            </div>
+        </div>
+
+     
+   <div class="box">
+            <div class="icons">
+             
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+                <img src="https://m.media-amazon.com/images/I/81Bj1o-m0VL._SL1500_.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>Mixed Nuts with Peanuts</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class=""></i>
+                </div>
+                <div class="price">Rs 900<span>1000</span></div>
+            </div>
+        </div>
+
+       <div class="box">
+            <div class="icons">
+             
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+                <img src="https://cdn.shopify.com/s/files/1/0261/0318/5501/products/Screen_Shot_2021-11-16_at_12.47.43_PM_1082x.png" alt="">
+            </div>
+            <div class="content">
+                <h3>Moonburst</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class=""></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <div class="price">Rs 900 <span>950</span></div>
+            </div>
+        </div>
+
+  <div class="box">
+            <div class="icons">
+             
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+                <img src="https://m.media-amazon.com/images/I/91P47phWyUL._SL1500_.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>Trail Mix</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <div class="price">Rs 450 <span>470</span></div>
+            </div>
+        </div>
+
+       <div class="box">
+            <div class="icons">
+             
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+                <img src="https://www.ubuy.co.in/productimg/?image=aHR0cHM6Ly9tLm1lZGlhLWFtYXpvbi5jb20vaW1hZ2VzL0kvODFSN3oySjJuUkwuX1NMMTUwMF8uanBn.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>Mini Yogurt Pretzels</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class=""></i>
+                </div>
+                <div class="price">Rs 1120 <span>1200</span></div>
+            </div>
+        </div>
+
+
+
+         <div class="box">
+            <div class="icons">
+             
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+                <img src="https://globalassets.starbucks.com/assets/c4bd8788c72b416c99c5134680e1c8e5.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>Dark Chocolate Espresso Beans</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="price">Rs 1200 <span>1400</span></div>
+            </div>
+        </div>
+
+
+       <div class="box">
+            <div class="icons">
+             
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+                <img src="https://m.media-amazon.com/images/I/71GS39oRN7L._SL1500_.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>Oreo</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class=""></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <div class="price">Rs 530 <span>570</span></div>
+            </div>
+        </div>
+
+
+  <div class="box">
+            <div class="icons">
+             
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+                <img src="https://m.media-amazon.com/images/I/41uiFmuvv3L.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>Chocolate Blueberries</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <div class="price">Rs 700 <span>750</span></div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="icons">
+                
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSmQ4lUDLmxrCInN7ripNeQbZX0vy_a18qNvaElpifonhhQoU_r35UrzXb1A_VrEiVOIM&usqp=CAU" alt="">
+            </div>
+            <div class="content">
+                <h3>Mint Chocolate Chip</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <div class="price">Rs 550 <span>620</span></div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+<!--product section ends-->
+<!-- review section starts  -->
+
+<section class="review" id="review">
+
+    <h1 class="heading"> customer's <span>review</span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="images/quote-img.png" alt="" class="quote">
+            <p>I find, in life, you generally get what you pay for - and this is no exception. It won't replace my day-to-day coffee, but it's well worth splashing out on if I fancy some caffeine based, self-indulgence and luxury. Guests who try it are always sceptical, but after tasting, unanimously agree it has a superior, bitter-free taste than the run of the mill stuff</p>
+            <img src="https://img.freepik.com/free-vector/cute-swag-polar-bear-with-hat-gold-chain-necklace-cartoon-illustration-flat-cartoon-style_138676-2719.jpg?w=2000" class="user" alt="">
+            <h3>Neeraj Bansal</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="images/quote-img.png" alt="" class="quote">
+            <p>This coffee is amazing and so smooth with little or no bitter taste in the mouth, have a couple of cups of this and then go back to your standard coffee and you will think "have i really been drinking this" as a treat when you've had a bad day nothing can beat it. 
+            </p>
+            <img src="https://image.shutterstock.com/image-illustration/cartoon-character-little-boy-points-260nw-1550040197.jpg" class="user" alt="">
+            <h3>Rohit</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+        </div>
+        
+        <div class="box">
+            <img src="images/quote-img.png" alt="" class="quote">
+            <p>I've been wanting to try this coffee for a long time now and it was definitely worth the wait! It's lovely, much smoother than I thought it would be.I would recommend this coffee and company to anyone. Thank you</p>
+            <img src="https://i.guim.co.uk/img/media/c8b1d78883dfbe7cd3f112495941ebc0b25d2265/256_0_3840_2304/master/3840.jpg?width=1200&height=900&quality=85&auto=format&fit=crop&s=579884b0bd058f1350519d3cc586d587" class="user" alt="">
+            <h3>Isha Dhaiya</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class=""></i>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- review section ends -->
+
+    
+<!-- contact section starts  -->
+
+<section class="contact" id="contact">
+
+    <h1 class="heading"> <span>contact</span> us </h1>
+
+    <div class="row">
+
+
+        <form action="">
+           
+            <div class="inputBox" name="myform" onsubmit="return validateform()">
+                <span class="fas fa-user"></span>
+                <input type="text" name="name"placeholder="name">
+            </div>
+            <div class="inputBox">
+                <span class="fas fa-envelope"></span>
+                <input type="email" name="email" placeholder="email">
+            </div>
+            <div class="inputBox">
+                <span class="fas fa-phone"></span>
+                <input type="number" name="number" placeholder="number">
+            </div>
+            <input type="submit" value="contact now" class="btn">
+        </form>
+
+    </div>
+
+</section>
+
+<!-- contact section ends -->
+<!-- blogs section starts  -->
+
+<section class="blogs" id="blogs">
+
+    <h1 class="heading"> our <span>blogs</span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <div class="image">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThnQi1HT2glQs04bk3zP-AlplKU0jw6zvdtnyfsOMTspytALZnFVqVkQ0W&s=10" alt="">
+            </div>
+            <div class="content">
+                <a href="#" class="title">tasty and refreshing coffee</a>
+                <span>31st dec, 2021</span>
+                <p>Coffee Stylish creator is dedicated to helping the home coffee drinker brew seriously good coffee, offering tutorials on variety of accessible topics, such as how to make great coffee with what you already have and how to keep your coffee maker clean.<br>
+
+If you’re looking to upgrade your equipment, check out her insightful reviews. She also has a dedicated Keurig coffee maker resource page. Her enormously handy conversion chart ensures you’ll always be able to brew the perfect cup of any size, for just one or for a crowd.<br>
+
+There’s also plenty of fanciful inspiration: If you like indulgent coffee drinks, you’ll love her recipes for anything from a coconut milk mocha to a dulce de leche iced coffee float.</p>
+                <a href="" class="btn">read more</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="https://thumbs.dreamstime.com/b/abstract-coffee-music-cups-coffee-splashes-butterflies-notes-77962915.jpg" alt="">
+            </div>
+            <div class="content">
+                <a href="#" class="title">Coffee Is Life</a>
+                <span>10th may, 2021</span>
+                <p>Coffee: Music in a Cup,” captures creator Margaret’s unpretentious approach to coffee connoisseurship. Her coffee reviews are cross-referenced by geographic origin and brew method. The precise details of the extraction process, like temperature and coffee-to-water ratio, are meticulously recorded so you can repeat the experience at home. Her tasting notes are vivid and delightful and they include serving thoughts, such as how the brew pairs with milk.</p>
+                <a href="#" class="btn">read more</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="https://media.self.com/photos/57d883d5d3276fe23294619c/master/pass/coffee-effects_feat.jpg" alt="">
+            </div>
+            <div class="content">
+                <a href="#" class="title">Coffee is a Language itself</a>
+                <span>15th jan, 2022</span>
+                <p>A Heart of Coffee
+
+Coffee has been forever been close to my heart. If you ask me, I don’t really remember when exactly I fell in love, but I just did. The aroma, the taste, the flavour, everything is so therapeutic. I am sure, like me, you have wondered what is about coffee that we love so much? Like, how is it even possible to love coffee so much?</p>
+                <a href="#" class="btn">read more</a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- blogs section ends -->
+
+<!-- footer section starts  -->
+
+<section class="footer">
+
+    <div class="share">
+        <a href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-instagram"></a>
+        <a href="#" class="fab fa-linkedin"></a>
+        <a href="#" class="fab fa-pinterest"></a>
+    </div>
+
+    <div class="links">
+        <a href="#">home</a>
+        <a href="#">about</a>
+        <a href="#">menu</a>
+        <a href="#">products</a>
+        <a href="#">review</a>
+        <a href="#">contact</a>
+        <a href="#">blogs</a>
+    </div>
+
+    <div class="credit">created by <span>mr. web designer</span> | all rights reserved</div>
+
+</section>
+
+<!-- footer section ends -->
+
+
+
+    </body>
+    </html>
+
